@@ -86,7 +86,6 @@
             label2.Size = new Size(20, 20);
             label2.TabIndex = 3;
             label2.Text = "ч.";
-            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -114,7 +113,6 @@
             label5.Size = new Size(221, 20);
             label5.TabIndex = 10;
             label5.Text = "Поезд отбывает со станции в: ";
-            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -212,6 +210,7 @@
             button1.TabIndex = 17;
             button1.Text = "Узнать, будет ли поезд на станции в то время, когда пришел пассажир";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label11
             // 

@@ -1,4 +1,4 @@
-namespace CcharpWinFormsTask1
+﻿namespace CcharpWinFormsTask1
 {
     public partial class Form1 : Form
     {
@@ -12,14 +12,10 @@ namespace CcharpWinFormsTask1
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Ура работает! (╯°□°）╯︵ ┻━┻");
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
