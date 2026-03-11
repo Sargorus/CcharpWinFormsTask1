@@ -5,6 +5,17 @@
         public Form1()
         {
             InitializeComponent();
+
+            // считывем значения из настроек
+            textBoxHourArrivalTrain.Text = Properties.Settings.Default.arrivalHour.ToString();
+            textBoxMinuteArrivalTrain.Text = Properties.Settings.Default.arrivalMinute.ToString();
+
+            textBoxDepartureHourTrain.Text = Properties.Settings.Default.departureHour.ToString();
+            textBoxDepartureMinuteTrain.Text = Properties.Settings.Default.departureMinute.ToString();
+
+            textBoxPassengerHour.Text = Properties.Settings.Default.passengerHour.ToString();
+            textBoxPassengerMinute.Text = Properties.Settings.Default.passengerMinute.ToString();
+
         }
 
 
@@ -18,10 +29,17 @@
 
                 if (timeArrive >= timeDeparture) // Нужно сдлеать так, чтобы в 11 вчерера пришел поезд (прошлого дня), а уходит в 2 часа утра, а я пришел в полность (до 2 часов), то я успел и поезд на станции.
                 {
-                    if (timePassenger <= timeDeparture)
+                    if ((timePassenger <= 24 * 60 && timePassenger >= timeArrive) || (timePassenger >= 0 && timePassenger <= timeDeparture) )
                     {
                         return "Поезд находится на станции";
                     }
+
+                    /*
+                    if (timePassenger <= timeDeparture && timePassenger <= 24*60 || timePassenger)
+                    {
+                        return "Поезд находится на станции";
+                    }
+                    */
                     return "Поезд не находится на станции";
                 }
 
@@ -40,10 +58,15 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
             int arrivalHour, arrivalMinute;
             int departureHour, departureMinute;
             int passengerHour, passengerMinute;
             string resultMSG;
+
+
+
             try
             {
 
@@ -63,6 +86,21 @@
             {
                 return;
             }
+
+            //  передаем введенные значения в параметры
+            Properties.Settings.Default.arrivalHour = arrivalHour;
+            Properties.Settings.Default.arrivalMinute = arrivalMinute;
+
+            Properties.Settings.Default.departureHour = departureHour;
+            Properties.Settings.Default.departureMinute = departureMinute;
+
+            Properties.Settings.Default.passengerHour = passengerHour;
+            Properties.Settings.Default.passengerMinute = passengerMinute;
+
+
+            Properties.Settings.Default.Save(); // сохраняем переданные значения, чтобы они восстановились пре очередном запуске
+
+
             resultMSG = Logic.CompareTrainInStation(arrivalHour, arrivalMinute, departureHour, departureMinute, passengerHour, passengerMinute);
 
             // MessageBox.Show("Ура работает! (╯°□°）╯︵ ┻━┻", resultMSG);
