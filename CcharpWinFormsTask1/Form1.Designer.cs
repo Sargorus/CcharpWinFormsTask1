@@ -29,36 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            textBox1 = new TextBox();
+            textBoxHourArrivalTrain = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
+            textBoxMinuteArrivalTrain = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            textBoxDepartureMinuteTrain = new TextBox();
+            textBoxDepartureHourTrain = new TextBox();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            textBoxPassengerMinute = new TextBox();
+            textBoxPassengerHour = new TextBox();
             pictureBox1 = new PictureBox();
             button1 = new Button();
-            label11 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // textBoxHourArrivalTrain
             // 
-            textBox1.Location = new Point(296, 66);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(75, 31);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            textBoxHourArrivalTrain.Location = new Point(296, 66);
+            textBoxHourArrivalTrain.Multiline = true;
+            textBoxHourArrivalTrain.Name = "textBoxHourArrivalTrain";
+            textBoxHourArrivalTrain.Size = new Size(75, 31);
+            textBoxHourArrivalTrain.TabIndex = 0;
             // 
             // label1
             // 
@@ -70,13 +68,13 @@
             label1.TabIndex = 1;
             label1.Text = "Задача: Поезд прибывает на станцию в a часов b минут и отправляется в c часов d минут. \r\nПассажир пришел на платформу в n часов m минут. Будет ли поезд стоять на платформе?\r\n";
             // 
-            // textBox2
+            // textBoxMinuteArrivalTrain
             // 
-            textBox2.Location = new Point(403, 66);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(75, 31);
-            textBox2.TabIndex = 2;
+            textBoxMinuteArrivalTrain.Location = new Point(403, 66);
+            textBoxMinuteArrivalTrain.Multiline = true;
+            textBoxMinuteArrivalTrain.Name = "textBoxMinuteArrivalTrain";
+            textBoxMinuteArrivalTrain.Size = new Size(75, 31);
+            textBoxMinuteArrivalTrain.TabIndex = 2;
             // 
             // label2
             // 
@@ -132,21 +130,21 @@
             label7.TabIndex = 8;
             label7.Text = "ч.";
             // 
-            // textBox3
+            // textBoxDepartureMinuteTrain
             // 
-            textBox3.Location = new Point(403, 112);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(75, 31);
-            textBox3.TabIndex = 7;
+            textBoxDepartureMinuteTrain.Location = new Point(403, 112);
+            textBoxDepartureMinuteTrain.Multiline = true;
+            textBoxDepartureMinuteTrain.Name = "textBoxDepartureMinuteTrain";
+            textBoxDepartureMinuteTrain.Size = new Size(75, 31);
+            textBoxDepartureMinuteTrain.TabIndex = 7;
             // 
-            // textBox4
+            // textBoxDepartureHourTrain
             // 
-            textBox4.Location = new Point(296, 112);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(75, 31);
-            textBox4.TabIndex = 6;
+            textBoxDepartureHourTrain.Location = new Point(296, 112);
+            textBoxDepartureHourTrain.Multiline = true;
+            textBoxDepartureHourTrain.Name = "textBoxDepartureHourTrain";
+            textBoxDepartureHourTrain.Size = new Size(75, 31);
+            textBoxDepartureHourTrain.TabIndex = 6;
             // 
             // label8
             // 
@@ -175,29 +173,29 @@
             label10.TabIndex = 14;
             label10.Text = "ч.";
             // 
-            // textBox5
+            // textBoxPassengerMinute
             // 
-            textBox5.Location = new Point(403, 158);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(75, 31);
-            textBox5.TabIndex = 13;
+            textBoxPassengerMinute.Location = new Point(403, 158);
+            textBoxPassengerMinute.Multiline = true;
+            textBoxPassengerMinute.Name = "textBoxPassengerMinute";
+            textBoxPassengerMinute.Size = new Size(75, 31);
+            textBoxPassengerMinute.TabIndex = 13;
             // 
-            // textBox6
+            // textBoxPassengerHour
             // 
-            textBox6.Location = new Point(296, 158);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(75, 31);
-            textBox6.TabIndex = 12;
+            textBoxPassengerHour.Location = new Point(296, 158);
+            textBoxPassengerHour.Multiline = true;
+            textBoxPassengerHour.Name = "textBoxPassengerHour";
+            textBoxPassengerHour.Size = new Size(75, 31);
+            textBoxPassengerHour.TabIndex = 12;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new Point(434, 195);
+            pictureBox1.Location = new Point(484, 192);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(366, 257);
+            pictureBox1.Size = new Size(330, 232);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
@@ -212,39 +210,29 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(34, 243);
-            label11.Name = "label11";
-            label11.Size = new Size(245, 20);
-            label11.TabIndex = 18;
-            label11.Text = "Пассажир прийдет на станцию в: ";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label11);
+            ClientSize = new Size(821, 425);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(label9);
             Controls.Add(label10);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
+            Controls.Add(textBoxPassengerMinute);
+            Controls.Add(textBoxPassengerHour);
             Controls.Add(label8);
             Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(label7);
-            Controls.Add(textBox3);
-            Controls.Add(textBox4);
+            Controls.Add(textBoxDepartureMinuteTrain);
+            Controls.Add(textBoxDepartureHourTrain);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(textBoxMinuteArrivalTrain);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxHourArrivalTrain);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -254,24 +242,23 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox textBoxHourArrivalTrain;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox textBoxMinuteArrivalTrain;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox textBoxDepartureMinuteTrain;
+        private TextBox textBoxDepartureHourTrain;
         private Label label8;
         private Label label9;
         private Label label10;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox textBoxPassengerMinute;
+        private TextBox textBoxPassengerHour;
         private PictureBox pictureBox1;
         private Button button1;
-        private Label label11;
     }
 }
